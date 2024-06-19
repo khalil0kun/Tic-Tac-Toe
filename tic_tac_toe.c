@@ -87,5 +87,8 @@ int main(){
     if (!Win){
         printf("\nYou're Trash...");
     }
+    printf("\n\nPress Any Key To Continue...");
+    getchar();
+    getchar();
     return 0;
 }
