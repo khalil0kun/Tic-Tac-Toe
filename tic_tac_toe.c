@@ -69,20 +69,24 @@ int main(){
     char UserChar='X',CompChar='O';
     int Counter=0;
     while(Counter<=9 && !Win){
+        DispBoard(Board);
         User(Board,UserChar);
         Counter+=1;
         if (Counter>=4){
             Win=Winner(Board,UserChar);
             if (Win){
+                Sleep(2000);
+                system("cls");
                 DispBoard(Board);
                 printf("\nBRAVOO !!! YOU WON");
                 break;
             }
         }
-        Sleep(1000);
+        Sleep(2000);
         Computer(Board,CompChar);
+        Sleep(2000);
         Counter+=1;
-        DispBoard(Board);
+        system("cls");
     }
     if (!Win){
         printf("\nYou're Trash...");
